@@ -88,12 +88,7 @@ class Camera {
         const maxImageSize = utils.getConfig().maxImageSize ? utils.getConfig().maxImageSize : 1500;
         const keep = utils.getConfig().gphoto2.keep === true ? true : false;
 
-        var pictureOptions = {
-            download: true,
-            keep: true
-        }
-
-        self.camera.takePicture(pictureOptions, function (err, data) {
+		self.camera.takePicture({ download: true, keep: keep }, function (err, data) {
 
             if (err) {
                 self.camera = undefined;	// needs to be reinitialized
@@ -102,7 +97,18 @@ class Camera {
             }
 
             fs.writeFileSync(filepath, data);
-            callback(0, filepath, webFilepath);
+
+			// sharp(data) // resize image to given maxSize
+			// 	.resize(Number(maxImageSize)) // scale width to 1500
+			// 	.toFile(filepath, function(err) {
+            //
+			// 	if (err) {
+			// 		callback(-3, 'resizing image failed', err)
+			// 	} else {
+            //         callback(0, filepath, webFilepath);
+			// 	}
+			// });
+
         });
 
     }
