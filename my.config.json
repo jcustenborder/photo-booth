@@ -14,7 +14,7 @@
   "photoPreviewDuration": "8",
   "photoSeriesLength": "3",
   "slideshow": {
-    "enabled": true,
+    "enabled": false,
     "activatesAfterSeconds": "30",
     "secondsPerPhoto": "8"
   },
