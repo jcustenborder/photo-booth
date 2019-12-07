@@ -11,8 +11,8 @@
   "maxImageSize": "4512",
   "firstPhotoCountdownLength": "5",
   "followingPhotosCountdownLength": "5",
-  "photoPreviewDuration": "8",
-  "photoSeriesLength": "3",
+  "photoPreviewDuration": "5",
+  "photoSeriesLength": "1",
   "slideshow": {
     "enabled": false,
     "activatesAfterSeconds": "30",

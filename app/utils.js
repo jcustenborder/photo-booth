@@ -269,16 +269,19 @@ class Utils {
       },10000);
     }
 
-    if (grayscale) {
-      sharp(_path) // resize image to given maxSize
-        .grayscale()
-        .resize(self.config.webapp.maxDownloadImageSize)  // Scale down images on webapp
-        .toFile(convertedFilepath, cb);
-    } else {
-      sharp(_path) // resize image to given maxSize
-        .resize(self.config.webapp.maxDownloadImageSize)  // Scale down images on webapp
-        .toFile(convertedFilepath, cb);
-    }
+    fs.copyFileSync(_path, convertedFilepath);
+    callback(true, webappFilepath);
+    // if (grayscale) {
+    //   sharp(_path) // resize image to given maxSize
+    //     .grayscale()
+    //     .resize(self.config.webapp.maxDownloadImageSize)  // Scale down images on webapp
+    //     .toFile(convertedFilepath, cb);
+    // } else {
+    //   fs.copyFileSync(
+    //   sharp(_path) // resize image to given maxSize
+    //     .resize(self.config.webapp.maxDownloadImageSize)  // Scale down images on webapp
+    //     .toFile(convertedFilepath, cb);
+    // }
   }
 
 }
