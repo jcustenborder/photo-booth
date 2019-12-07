@@ -1,0 +1,50 @@
+{
+  "init": {
+    "fullscreen": true,
+    "width": 1920,
+    "height": 1080,
+    "showDevTools": false,
+    "useGPIO": false,
+    "grayscaleMode": false,
+    "preventScreensaver": true
+  },
+  "maxImageSize": "4512",
+  "firstPhotoCountdownLength": "5",
+  "followingPhotosCountdownLength": "3",
+  "photoPreviewDuration": "8",
+  "photoSeriesLength": "3",
+  "slideshow": {
+    "enabled": true,
+    "activatesAfterSeconds": "30",
+    "secondsPerPhoto": "8"
+  },
+  "gphoto2": {
+    "capturetarget": 1,
+    "keep": true
+  },
+  "triggers": {
+    "onClick": true,
+    "customKeys": [
+      "PageUp",
+      "PageDown",
+      "b"
+    ]
+  },
+  "content_dir": "../content",
+  "webapp": {
+    "password": "test",
+    "maxDownloadImageSize": 4512,
+    "enableRemoteRelease": false
+  },
+  "branding": {
+    "type": "text",
+    "content": "<div style='font-size: 1.2em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.5em;'></i> <b style='font-size: 2em; padding-left: 15px;'>photo-booth</b><br /><p>Log into wifi, browse to <b style='padding: 0 5px;'>photobooth</b> and download your photos!</p></div>",
+    "position": "bottomleft"
+  },
+  "flash": {
+    "enabled": true
+  },
+  "live": {
+    "framerate": 23
+  }
+}
