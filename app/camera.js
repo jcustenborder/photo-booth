@@ -90,8 +90,7 @@ class Camera {
 
         var pictureOptions = {
             download: true,
-            keep: true,
-            targetPath: filepath
+            keep: true
         }
 
         self.camera.takePicture(pictureOptions, function (err, data) {
@@ -102,24 +101,8 @@ class Camera {
                 return;
             }
 
-            const resize = false;
-
-            if (resize) {
-                sharp(data) // resize image to given maxSize
-                    .resize(Number(maxImageSize)) // scale width to 1500
-                    .toFile(filepath, function (err) {
-
-                        if (err) {
-                            callback(-3, 'resizing image failed', err)
-                        } else {
-                            callback(0, filepath, webFilepath);
-                        }
-                    });
-            } else {
-            	fs.copySync(filepath, webFilepath)
-				callback(0, filepath, webFilepath);
-			}
-
+            fs.writeFileSync(filepath, data);
+            callback(0, filepath, webFilepath);
         });
 
     }
