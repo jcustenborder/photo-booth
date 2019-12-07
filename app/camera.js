@@ -96,18 +96,15 @@ class Camera {
                 return;
             }
 
-            fs.writeFileSync(filepath, data);
+			sharp(data) // resize image to given maxSize
+				.toFile(filepath, function(err) {
 
-			// sharp(data) // resize image to given maxSize
-			// 	.resize(Number(maxImageSize)) // scale width to 1500
-			// 	.toFile(filepath, function(err) {
-            //
-			// 	if (err) {
-			// 		callback(-3, 'resizing image failed', err)
-			// 	} else {
-            //         callback(0, filepath, webFilepath);
-			// 	}
-			// });
+				if (err) {
+					callback(-3, 'resizing image failed', err)
+				} else {
+                    callback(0, filepath, webFilepath);
+				}
+			});
 
         });
 
