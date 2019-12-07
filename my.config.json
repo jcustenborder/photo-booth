@@ -1,8 +1,8 @@
 {
   "init": {
     "fullscreen": true,
-    "width": 1920,
-    "height": 1080,
+    "width": "1440",
+    "height": "900",
     "showDevTools": false,
     "useGPIO": false,
     "grayscaleMode": false,
@@ -10,7 +10,7 @@
   },
   "maxImageSize": "4512",
   "firstPhotoCountdownLength": "5",
-  "followingPhotosCountdownLength": "3",
+  "followingPhotosCountdownLength": "5",
   "photoPreviewDuration": "8",
   "photoSeriesLength": "3",
   "slideshow": {
@@ -38,13 +38,13 @@
   },
   "branding": {
     "type": "text",
-    "content": "<div style='font-size: 1.2em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.5em;'></i> <b style='font-size: 2em; padding-left: 15px;'>photo-booth</b><br /><p>Log into wifi, browse to <b style='padding: 0 5px;'>photobooth</b> and download your photos!</p></div>",
+    "content": "<div style='font-size: 1.2em; padding-left: 25px;'><i class='fa fa-wifi' aria-hidden='true' style='font-size: 2.5em;'></i> <b style='font-size: 2em; padding-left: 15px;'>xmas</b><br /><p>Log into wifi password 'xmas2019', browse to <b style='padding: 0 5px;'>photobooth</b> and download your photos!</p></div>",
     "position": "bottomleft"
   },
   "flash": {
     "enabled": true
   },
   "live": {
-    "framerate": 23
+    "framerate": 10
   }
 }
