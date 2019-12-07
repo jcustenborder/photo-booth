@@ -1,8 +1,8 @@
 {
   "init": {
     "fullscreen": true,
-    "width": "1440",
-    "height": "900",
+    "width": "640",
+    "height": "424",
     "showDevTools": false,
     "useGPIO": false,
     "grayscaleMode": false,
@@ -42,7 +42,7 @@
     "position": "bottomleft"
   },
   "flash": {
-    "enabled": true
+    "enabled": false
   },
   "live": {
     "framerate": 10
